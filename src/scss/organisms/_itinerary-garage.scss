@@ -1,0 +1,262 @@
+/* src/scss/organisms/_itinerary-garage.scss */
+$transition-duration: 300ms;
+
+body.itinerary-garage-viewing {
+  overflow: hidden;
+
+  .btn-itinerary.remove:not(.btn-garage) {
+    //opacity: 0;
+  }
+}
+
+.itinerary-garage {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba(47, 59, 62, 0.95);
+  max-height: 0;
+  height: 100%;
+  width: 0;
+  overflow: visible;
+  z-index: 99999;
+  transition: all $transition-duration linear;
+  //opacity: 0;
+
+  h3 {
+    color: white;
+  }
+
+  &.initializing {
+    z-index: -99999;
+    width: 100%;
+    opacity: 0;
+
+    .itinerary-garage-inner {
+      height: auto;
+      width: 100%;
+    }
+    .itinerary-garage-contents {
+      max-height: 100%;
+      width: 100%;
+    }
+  }
+
+  &.itinerary-garage-viewing {
+    opacity: 1;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    z-index: 99999999;
+
+    .itinerary-garage-inner {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .itinerary-garage-toggle {
+
+      h4 {
+
+      }
+    }
+  }
+
+  .itinerary-garage-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: all $transition-duration linear;
+  }
+
+  .itinerary-garage-toggle__wrap {
+    display: inline-block !important;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9;
+    transition: $transition-duration all linear;
+
+    .itinerary-buttons {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+
+      .btn-itinerary {
+        font-size: 14px;
+      }
+    }
+
+    h4 {
+      position: relative;
+      margin-bottom: 0;
+      text-transform: none;
+      font-variant: small-caps;
+      white-space: nowrap;
+      color: #fff;
+      padding-right: 40px;
+
+      &::before {
+        font-family: FontAwesome;
+        content: "\f107";
+        margin-left: 10px;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: 400ms all linear;
+      }
+      &::after {
+        font-family: FontAwesome;
+        content: "\f106";
+        position: absolute;
+        right: 0;
+        bottom: 0
+      }
+
+      .itinerary-stop-count {
+        display: inline-block;
+        position: relative;
+        margin-left: 10px;
+        padding: 0;
+        background: white;
+        font-size: 14px;
+        color: #000;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        line-height: 25px;
+        height: 25px;
+        width: 25px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 150%;
+          width: 0;
+          max-height: 0;
+          background: get-color('color-1', .03);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          transition: $transition-duration all linear;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 110%;
+          width: 0;
+          max-height: 0;
+          background: get-color('color-1', .03);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          transition: $transition-duration all linear;
+        }
+
+        &.added {
+
+          &::before {
+            max-height: 110%;
+            width: 110%;
+            border: 2px solid #fff;
+            z-index: 1;
+          }
+
+          &::after {
+            max-height: 150%;
+            width: 150%;
+            box-shadow: 0px 0px 6px 3px get-color('white', .6);
+            z-index: 0;
+          }
+        }
+      }
+    }
+
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+
+  &.itinerary-garage-viewing {
+
+    .itinerary-garage-toggle {
+
+      h4 {
+
+        &::before {
+          top: 2px;
+          right: 0;
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+
+      span {
+        background-color: get-color('color-1');
+      }
+    }
+
+  }
+
+  .itinerary-garage-contents {
+    display: block;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    max-height: 0;
+    width: 100%;
+    transition: all $transition-duration ease-in-out;
+
+    &.visible {
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      max-height: 100%;
+      width: 100%;
+    }
+
+    .itinerary-garage-stops {
+      margin: 20px 0;
+    }
+
+    .search-result {
+      background-color: get-color('color-2');
+
+      &,
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .no-stops-text {
+    color: #fff;
+  }
+}
+
+.itinerary-garage-stop-wrap {
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    &:nth-of-type(3n+4) {
+      clear: both;
+    }
+  }
+
+  @media (min-width: 992px) {
+    &:nth-of-type(4n+5) {
+      clear: left;
+    }
+  }
+
+}

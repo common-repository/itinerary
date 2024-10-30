@@ -1,0 +1,17 @@
+/* src/scss/molecules/_card.scss */
+
+.xs-card {
+	box-shadow: 0 1px 4px 0 rgba(0,0,0, 0.73);
+	border-radius: 2px;
+	outline: none;
+	
+	@media (min-width: $screen-sm) {
+		box-shadow: none;
+	}
+}
+
+.card {
+	box-shadow: 0 1px 4px 0 rgba(0,0,0, 0.73);
+	border-radius: 2px;
+	outline: none;
+}

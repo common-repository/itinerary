@@ -1,0 +1,75 @@
+/* src/scss/layout/_grid.scss */
+
+$gutter: 15px;
+
+.itinerary-container,
+.itinerary-row,
+.itinerary-column {
+  &::after {
+    content: '';
+    display: block;
+    min-height: 1px;
+    clear: both;
+  }
+}
+
+.itinerary-container {
+  margin: 0 auto;
+  padding-left: #{$gutter};
+  padding-right: #{$gutter};
+  width: 100%;
+  max-width: 1170px;
+
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.itinerary-row {
+  margin-left: -#{$gutter};
+  margin-right: -#{$gutter};
+}
+
+[class*=itinerary-col-] {
+  display: block;
+  position: relative;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  float: left;
+
+}
+
+img {
+  max-width: 100% !important;
+  height: auto;
+}
+
+$cols: (
+        'xs': 0px,
+        'sm': 768px,
+        'md': 992px,
+        'lg':1200px
+);
+$numberOfColumns: 12;
+@each $size, $val in $cols {
+  $i: 1;
+  @if ($size != 'xs') {
+    @media (min-width: #{$val}) {
+      @while $i <= $numberOfColumns {
+        $colPercentage: percentage($i / $numberOfColumns);
+        .itinerary-col-#{$size}-#{$i} {
+          width: $colPercentage;
+        }
+        $i: $i+1;
+      }
+    }
+  } @else {
+    @while $i <= $numberOfColumns {
+      $colPercentage: percentage($i / $numberOfColumns);
+      .itinerary-col-#{$size}-#{$i} {
+        width: $colPercentage;
+      }
+      $i: $i+1;
+    }
+  }
+}

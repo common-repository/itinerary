@@ -1,0 +1,91 @@
+/* src/scss/molecules/_itinerary-buttons.scss */
+.itinerary-buttons {
+  margin: 10px 15px;
+  //float: right;
+
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+.btn-itinerary-group {
+
+  .btn-itinerary {
+
+    &:not(:first-of-type) {
+      margin-left: 10px;
+    }
+  }
+
+  &.right {
+    text-align: right;
+    .btn-itinerary {
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.btn-itinerary {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 400ms all ease-in-out;
+
+  &::before,
+  .icon::before {
+    font-family: FontAwesome;
+  }
+
+  &.working {
+    animation: itinerary-btn-working 750ms infinite alternate;
+  }
+
+  &.add {
+
+    .icon::before {
+      //content: "\f0fe";
+      content: "\f006";
+    }
+  }
+
+  &.remove {
+    .icon::before {
+      content: "\f005";
+      //content: "\f146";
+    }
+  }
+
+  &.view {
+    color: #fff;
+    text-decoration: none;
+
+    &::before {
+      padding-right: 10px;
+      //content: "\f0cb";
+      content: "\f03a";
+    }
+  }
+
+  &.pdf {
+    text-decoration: none;
+    font-size: 16px;
+
+    &::before {
+      padding-right: 6px;
+      content: "\f1c1";
+    }
+  }
+
+  &.print {
+    text-decoration: none;
+    font-size: 16px;
+
+    &::before {
+      padding-right: 6px;
+      content: "\f02f";
+    }
+  }
+}

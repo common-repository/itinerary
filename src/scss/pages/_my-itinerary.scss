@@ -1,0 +1,34 @@
+/* src/scss/pages/_my-itinerary.scss */
+
+#my-itinerary {
+
+  .btn-itinerary {
+    padding-left: 20px;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  .itinerary-loader {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10vh 5vw;
+    font-size: 48px;
+  }
+
+  .itinerary-stop {
+    margin: 20px 0;
+    padding: 20px 0;
+
+    &:not(:first-of-type) {
+      border-top: 2px solid #eee;
+    }
+
+  }
+
+  & ~ .itinerary-buttons {
+    display: none;
+  }
+}

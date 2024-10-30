@@ -1,0 +1,138 @@
+[
+    {
+        "component": "itinerary-garage",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "itinerary-garage-stops",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "itinerary-buttons",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -1,
+        "has_js": "false"
+    },
+    {
+        "component": "itinerary-garage-stop",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -2,
+        "has_js": "false"
+    },
+    {
+        "component": "card",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -3,
+        "has_js": "false"
+    },
+    {
+        "component": "my-itinerary",
+        "category": "pages",
+        "description": "",
+        "backgroundColor": "",
+        "order": -4,
+        "has_js": "false"
+    },
+    {
+        "component": "settings",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -5,
+        "has_js": "false"
+    },
+    {
+        "component": "itinerary-settings-index",
+        "category": "pages",
+        "description": "",
+        "backgroundColor": "",
+        "order": -6,
+        "has_js": "false"
+    },
+    {
+        "component": "form-input",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -7,
+        "has_js": "false"
+    },
+    {
+        "component": "card-section",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -8,
+        "has_js": "false"
+    },
+    {
+        "component": "header",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -9,
+        "has_js": "false"
+    },
+    {
+        "component": "header",
+        "category": "partials",
+        "description": "",
+        "backgroundColor": "",
+        "order": -10,
+        "has_js": "false"
+    },
+    {
+        "component": "footer",
+        "category": "partials",
+        "description": "",
+        "backgroundColor": "",
+        "order": -11,
+        "has_js": "false"
+    },
+    {
+        "component": "admin-itinerary-list",
+        "category": "pages",
+        "description": "",
+        "backgroundColor": "",
+        "order": -12,
+        "has_js": "false"
+    },
+    {
+        "component": "grid",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": -13,
+        "has_js": "false"
+    },
+    {
+        "component": "decimal",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
+        "order": -14,
+        "has_js": "false"
+    },
+    {
+        "component": "decimal",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
+        "order": -15,
+        "has_js": "false"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "category": "atoms",
+        "order": 2
+    },
+    {
+        "category": "molecules",
+        "order": 3
+    },
+    {
+        "category": "organisms",
+        "order": 4
+    },
+    {
+        "category": "variables",
+        "order": 0
+    },
+    {
+        "category": "pages",
+        "order": 5
+    },
+    {
+        "category": "bootstrap",
+        "order": 1
+    },
+    {
+        "category": "partials",
+        "order": 7
+    },
+    {
+        "category": "layout",
+        "order": 8
+    }
+]

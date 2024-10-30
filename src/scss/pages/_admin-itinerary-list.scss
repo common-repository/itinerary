@@ -1,0 +1,10 @@
+/* src/scss/pages/_admin-itinerary-list.scss */
+
+@media (min-width: $screen-sm) {
+  .admin-itinerary {
+
+    &:nth-of-type(3n+4) {
+      clear: left;
+    }
+  }
+}
